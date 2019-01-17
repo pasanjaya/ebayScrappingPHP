@@ -1,21 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        table, td, th {  
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
 <?php
 
 echo "
-<style>
-table, td, th {  
-  border: 1px solid #ddd;
-  text-align: left;
-}
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  padding: 15px;
-}
-</style>
 
 ";
 
@@ -64,7 +80,7 @@ $movies['price'] = array_values($movies['price']);
 // print_r($movies['imgs']);die;
 
 
-echo "<h1> Ebay search: ".rawurldecode($serchString);
+echo "<h1> Search string: ".rawurldecode($serchString)."</h1>";
 echo "<br/>";
 echo "<table>";
 echo "<tr>";
@@ -84,3 +100,7 @@ echo "</table>";
 
 
 curl_close($curl); // close curl
+
+?>
+</body>
+</html>
